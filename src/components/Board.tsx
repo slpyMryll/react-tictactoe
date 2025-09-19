@@ -10,7 +10,7 @@ interface BoardProps {
 
 export default function Board({ squares, onClick }: BoardProps) {
   return (
-    <div className="mt-40 bg-[#F6F0E1] w-[360px] h-[350px] flex items-center justify-center rounded-3xl">
+    <div className="mt-40 bg-[#F6F0E1] w-[340px] sm:w-[360px] h-[350px] flex items-center justify-center rounded-3xl">
       <div className="grid grid-cols-1">
         <div className="board-row flex gap-1.5">
           <Square value={squares[0]} onClick={() => onClick(0)} />
