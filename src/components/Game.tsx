@@ -46,9 +46,9 @@ const Game: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className=" flex items-center justify-center">
       {/* Layout: Board in center, history on the right */}
-      <div className="flex items-start gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-start gap-4 items-center">
         {/* Board */}
         <div className="relative flex flex-col items-center">
           <Board squares={currentSquares} onClick={handleClick} />
@@ -72,7 +72,7 @@ const Game: React.FC = () => {
               style={{ fontFamily: "Acme, sans-serif" }}
               className="absolute top-[70px] bg-[#818FB4] px-6 py-3 rounded-3xl z-10 shadow-lg"
             >
-              <h2 className="text-white text-3xl font-bold text-center p-4 whitespace-pre-line">
+              <h2 className="text-white text-lg font-bold text-center p-4 whitespace-pre-line">
                 {winner
                   ? `Congratulations! \n Player ${winner} wins!`
                   : "It's a tie! Try again!"}
@@ -92,14 +92,14 @@ const Game: React.FC = () => {
         </div>
 
         {/* Move History */}
-        <div className="bg-[#F6F0E1] text-[#363062] p-4 rounded-lg shadow-md w-48 h-max mt-40">
+        <div className="w-full flex flex-col bg-[#F6F0E1] text-[#363062] p-4 rounded-lg shadow-md w-48 sm:mt-40 mt-5">
           <h3
             style={{ fontFamily: "Acme, sans-serif" }}
             className="font-bold mb-2 text-2xl"
           >
             Move History
           </h3>
-          <ol className="space-y-1">{moves}</ol>
+          <ol className="grid grid-cols-5 sm:grid-cols-1 space-y-1">{moves}</ol>
         </div>
       </div>
     </div>
