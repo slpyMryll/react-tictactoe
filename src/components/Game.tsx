@@ -70,7 +70,7 @@ const Game: React.FC = () => {
           {(winner || draw) && (
             <div
               style={{ fontFamily: "Acme, sans-serif" }}
-              className="absolute top-[70px] bg-[#818FB4] px-6 py-3 rounded-3xl z-10 shadow-lg"
+              className="absolute sm:top-[70px] top-[130px] bg-[#818FB4] px-6 py-3 rounded-3xl z-10 shadow-lg"
             >
               <h2 className="text-white text-lg font-bold text-center p-4 whitespace-pre-line">
                 {winner
@@ -84,7 +84,7 @@ const Game: React.FC = () => {
           {!winner && !draw && (
             <div
               style={{ fontFamily: "Acme, sans-serif" }}
-              className="absolute top-[110px] left-1 bg-[#F6F0E1] text-2xl text-[#363062] px-7 py-4 w-max rounded-2xl shadow-lg"
+              className="absolute sm:top-[110px] left-1 bg-[#F6F0E1] text-2xl text-[#363062] px-7 py-4 w-max rounded-2xl shadow-lg"
             >
               {xIsNext ? "X" : "O"}'s Turn
             </div>
