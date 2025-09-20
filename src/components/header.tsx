@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <header className="w-full">
       <h1
         style={{ fontFamily: "Acme, sans-serif" }}
-        className="p-5 text-center text-4xl font-bold text-[#F6F0E1]"
+        className="p-2 text-center text-4xl font-bold text-[#F6F0E1]"
       >
         Tic Tac Toe
       </h1>
